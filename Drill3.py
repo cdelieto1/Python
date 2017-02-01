@@ -1,8 +1,16 @@
+#Cassandra Delieto
+#Python vs. 3.6 using sublime text editor
+#1/30/17
+
 import os
 import datetime
 import shutil
+import Drill_5
+import GUI_db
 
-def transfer(src,dst):
+def transfer(self):
+    src = self.src_var.get()
+    dst = self.dst_var.get()
     original_folder = os.listdir(src)
     for file in original_folder:
         if file.endswith('.txt'):
@@ -13,7 +21,6 @@ def transfer(src,dst):
                     print (file + " file modified within 24 hrs has been copied to: " + os.path.abspath(dst))
                 else:
                     print ("no.txt files have been modified within 24 hrs")
-                 
-src="/Users/Mac/Desktop/Original/"  
-dst="/Users/Mac/Desktop/Receiving/" 
-transfer(src,dst)
+
+if __name__ == "__main__":
+    pass
